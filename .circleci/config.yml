@@ -3,9 +3,15 @@ version: 2.1
 orbs:
   v1: aurelia/v1@0.0.1
 
+jobs:
+  e2e:
+    executor: v1/docker_circleci
+    steps:
+      - run: npm i -g verdaccio
+      - v1/install_build_test_gulp
+
+
 workflows:
   build_test:
     jobs:
-      - v1/run_all:
-          repo_name: dummy
-          process: gulp
+      - e2e
