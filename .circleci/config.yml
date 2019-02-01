@@ -24,9 +24,9 @@ jobs:
           name: "npm config"
           command: |
             npm adduser --registry http://localhost:4873
-            expect "Username:"
+            expect "Username: "
             send "aureliaeffect"
-            expect "Password:"
+            expect "Password: "
             send "aurelia"
             expect "Email: (this IS public)"
             send "aurelia@bluespire.com"
