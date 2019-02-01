@@ -22,7 +22,8 @@ jobs:
           command: verdaccio
       - run:
           name: "npm config"
-          command: npm adduser <<! \
+          command: ->
+            npm adduser <<! \
             AureliaEffect \
             aurelia \
             aurelia@bluespire.com \
