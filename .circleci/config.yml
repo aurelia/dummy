@@ -1,0 +1,10 @@
+version: 2.1
+
+orbs:
+  v1: aurelia/v1@volatile
+
+workflows:
+  build_test:
+    jobs:
+      - v1/run_all:
+          repo_name: dummy
