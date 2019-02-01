@@ -19,3 +19,4 @@ workflows:
   build_test:
     jobs:
       - e2e
+
