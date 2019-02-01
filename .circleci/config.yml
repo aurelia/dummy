@@ -1,29 +1,18 @@
 version: 2.1
 
 orbs:
-  v1: aurelia/v1@0.0.1
+  common: aurelia/common@volatile
+  v1: aurelia/v1@volatile
 
 jobs:
   e2e:
-    executor: v1/docker_circleci
+    executor: common/docker_circleci
     steps:
-      - run:
-          name: "git config"
-          command: |
-            git config --global user.email "aurelia@bluespire.com"
-            git config --global user.name "AureliaEffect"
-            git config --global core.mergeoptions --no-edit
-      - run: sudo npm i -g verdaccio npm-cli-login
+      - common/configure_git
+      - common/setup_verdaccio
       - checkout
       - v1/install_build_test_gulp
-      - run:
-          name: "verdaccio"
-          background: true
-          command: verdaccio
-      - run: npm-cli-login -u aureliaeffect -p aurelia -e aurelia@bluespire.com -r http://localhost:4873
-      - run:
-          name: "npm publish local"
-          command: npm publish --registry http://localhost:4873
+      - common/npm_publish
 
 
 workflows:
