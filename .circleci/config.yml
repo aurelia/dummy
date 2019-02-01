@@ -7,9 +7,26 @@ jobs:
   e2e:
     executor: v1/docker_circleci
     steps:
+      - run:
+          name: "git config"
+          command: |
+            git config --global user.email "aurelia@bluespire.com"
+            git config --global user.name "AureliaEffect"
+            git config --global core.mergeoptions --no-edit
       - run: sudo npm i -g verdaccio
       - checkout
       - v1/install_build_test_gulp
+      - run:
+          name: "verdaccio"
+          background: true
+          command: verdaccio
+      - run:
+          name: "npm config"
+          command: npm adduser <<! \
+            AureliaEffect \
+            aurelia \
+            aurelia@bluespire.com \
+            !
 
 
 workflows:
