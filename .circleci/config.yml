@@ -22,12 +22,13 @@ jobs:
           command: verdaccio
       - run:
           name: "npm config"
-          command: ->
-            npm adduser <<! \
-            AureliaEffect \
-            aurelia \
-            aurelia@bluespire.com \
-            !
+          command: |
+            echo "//localhost:4873/:_password=aurelia" > ~/.npmrc
+            echo "//localhost:4873/:username=AureliaEffect" >> ~/.npmrc
+            echo "//localhost:4873/:email=aurelia@bluespire.com" >> ~/.npmrc
+      - run:
+          name: "npm publish local"
+          command: npm publish --registry http://localhost:4873
 
 
 workflows:
