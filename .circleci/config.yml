@@ -13,23 +13,14 @@ jobs:
             git config --global user.email "aurelia@bluespire.com"
             git config --global user.name "AureliaEffect"
             git config --global core.mergeoptions --no-edit
-      - run: sudo npm i -g verdaccio
+      - run: sudo npm i -g verdaccio npm-cli-login
       - checkout
       - v1/install_build_test_gulp
       - run:
           name: "verdaccio"
           background: true
           command: verdaccio
-      - run:
-          name: "npm config"
-          command: |
-            npm adduser --registry http://localhost:4873
-            expect "Username: "
-            send "aureliaeffect"
-            expect "Password: "
-            send "aurelia"
-            expect "Email: (this IS public)"
-            send "aurelia@bluespire.com"
+      - run: npm-cli-login -u aureliaeffect -p aurelia -e aurelia@bluespire.com -r http://localhost:4873
       - run:
           name: "npm publish local"
           command: npm publish --registry http://localhost:4873
