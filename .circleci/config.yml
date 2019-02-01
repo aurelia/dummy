@@ -15,7 +15,6 @@ jobs:
       - common/npm_publish
       - v1/install_run_e2e_tests
 
-
 workflows:
   build_test:
     jobs:
