@@ -7,7 +7,7 @@ jobs:
   e2e:
     executor: v1/docker_circleci
     steps:
-      - run: npm i -g verdaccio
+      - run: sudo npm i -g verdaccio
       - v1/install_build_test_gulp
 
 
