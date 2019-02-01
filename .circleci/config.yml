@@ -6,5 +6,16 @@ orbs:
 workflows:
   build_test:
     jobs:
-      - v1/run_all
+      - v1/build_test:
+          filters:
+            branches:
+              ignore:
+                - master
+      - v1/build_test_merge:
+          from: master
+          to: develop
+          filters:
+            branches:
+              only:
+                - master
 
