@@ -39,4 +39,3 @@ workflows:
           name: npm_publish
           requires:
             - request_publish_latest
-
