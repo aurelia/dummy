@@ -1,4 +1,4 @@
 {
-  "name": "aurelia-polyfills",
-  "main": "dist/aurelia-polyfills.d.ts"
+  "name": "aurelia-dummy",
+  "main": "dist/aurelia-dummy.d.ts"
 }
