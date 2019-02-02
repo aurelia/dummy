@@ -7,4 +7,10 @@ workflows:
   main:
     jobs:
       - v1/build_test
-      - v1/build_merge
+      - v1/build_merge:
+          requires:
+            - v1/build_test
+          filters:
+            branches:
+              only:
+                - develop
