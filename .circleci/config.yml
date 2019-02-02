@@ -6,14 +6,5 @@ orbs:
 workflows:
   main:
     jobs:
-      - v1/build_test:
-          name: build_test
-      - v1/build_merge:
-          from: develop
-          to: master
-          requires:
-            - build_test
-          filters:
-            branches:
-              only:
-                - develop
+      - v1/build_test
+      - v1/build_merge
