@@ -10,11 +10,11 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
+                - develop
       - v1/build_test_merge:
-          from: master
-          to: develop
+          from: develop
+          to: master
           filters:
             branches:
               only:
-                - master
+                - develop
