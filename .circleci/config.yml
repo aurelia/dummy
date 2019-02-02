@@ -4,16 +4,15 @@ orbs:
   v1: aurelia/v1@volatile
 
 workflows:
-  build_test:
+  main:
     jobs:
       - v1/build_test:
-          filters:
-            branches:
-              ignore:
-                - develop
-      - v1/build_test_merge:
+          name: build_test
+      - v1/build_merge:
           from: develop
           to: master
+          requires:
+            - build_test
           filters:
             branches:
               only:
