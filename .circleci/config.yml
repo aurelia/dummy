@@ -14,3 +14,12 @@ workflows:
             branches:
               only:
                 - develop
+  release:
+    jobs:
+      - v1/npm_publish:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*$/
+
