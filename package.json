@@ -19,6 +19,13 @@
     "type": "git",
     "url": "http://github.com/aurelia/dummy"
   },
+  "files": [
+    "dist",
+    "doc",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "jspm": {
     "registry": "npm",
     "jspmPackage": true,
