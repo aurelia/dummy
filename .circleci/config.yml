@@ -34,6 +34,10 @@ workflows:
           type: approval
           requires:
             - npm_publish_dry
+      - v1/merge_back:
+          <<: *filter_only_tag
+          requires:
+            - request_publish_latest
       - v1/npm_publish:
           <<: *filter_only_tag
           name: npm_publish
