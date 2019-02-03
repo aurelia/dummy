@@ -23,8 +23,6 @@ workflows:
           <<: *filter_only_develop
           requires:
             - v1/build_test
-  release:
-    jobs:
       - v1/npm_publish:
           <<: *filter_only_tag
           name: npm_publish_dry
