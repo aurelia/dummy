@@ -1,3 +1,8 @@
+<a name="1.3.3"></a>
+## [1.3.3](https://github.com/aurelia/dummy/compare/1.3.1...1.3.3) (2019-02-03)
+
+
+
 <a name="1.3.2"></a>
 ## [1.3.2](https://github.com/aurelia/dummy/compare/1.3.1...1.3.2) (2019-02-03)
 
