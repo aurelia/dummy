@@ -1,42 +1,5 @@
 <a name="1.3.2"></a>
-## 1.3.2 (2019-02-03)
-
-
-### Bug Fixes
-
-* **array:** make Array.from work with mapping functions ([c425a49](https://github.com/aurelia/dummy/commit/c425a49)), closes [/github.com/aurelia/polyfills/issues/4#issuecomment-246473333](https://github.com//github.com/aurelia/polyfills/issues/4/issues/issuecomment-246473333)
-* **array:** make proto methods non enumerable ([6ed412f](https://github.com/aurelia/dummy/commit/6ed412f)), closes [#12](https://github.com/aurelia/dummy/issues/12)
-* **binding:** add polyfill for Array.prototype.fill ([#59](https://github.com/aurelia/dummy/issues/59)) ([ac4893f](https://github.com/aurelia/dummy/commit/ac4893f))
-* **console:** remove in order to move to pal ([80f0c7b](https://github.com/aurelia/dummy/commit/80f0c7b))
-* **object:** assign ignores null or undefined ([941a892](https://github.com/aurelia/dummy/commit/941a892))
-* **object:** correct es6 Object.keys behavior for primitives ([1185293](https://github.com/aurelia/dummy/commit/1185293))
-* **reflect:** fix target-is-object check ([841a64b](https://github.com/aurelia/dummy/commit/841a64b))
-* **reflect:** incorrect arg casing ([52f06db](https://github.com/aurelia/dummy/commit/52f06db))
-* **reflect:** missed constants for implementation internals ([36e7a3e](https://github.com/aurelia/dummy/commit/36e7a3e))
-* **reflect:** missing bind reference ([89964a1](https://github.com/aurelia/dummy/commit/89964a1))
-* **symbol:** fix Object.defineProperties ([f548033](https://github.com/aurelia/dummy/commit/f548033))
-* **symbol:** remove window global ([14916c1](https://github.com/aurelia/dummy/commit/14916c1))
-* **symbol:** treat `null` value the same as `undefined` ([4b705bb](https://github.com/aurelia/dummy/commit/4b705bb)), closes [#13](https://github.com/aurelia/dummy/issues/13)
-* **symbols:** check that descriptors is an object ([e181ff7](https://github.com/aurelia/dummy/commit/e181ff7))
-* **symbols:** propertyIsEnumerable null reference ([b7c59e5](https://github.com/aurelia/dummy/commit/b7c59e5))
-
-
-### Features
-
-* **all:** add iterator support to Array.from ([5f23788](https://github.com/aurelia/dummy/commit/5f23788))
-* **all:** add object.assign and collection polyfills ([2ff683d](https://github.com/aurelia/dummy/commit/2ff683d))
-* **all:** add remaining known polyfills ([c039159](https://github.com/aurelia/dummy/commit/c039159))
-* **all:** add symbols ([f11b8f4](https://github.com/aurelia/dummy/commit/f11b8f4))
-* **all:** fix dependencies and build ([913b2d7](https://github.com/aurelia/dummy/commit/913b2d7))
-* **collections:** add weak map and set ([59d58dc](https://github.com/aurelia/dummy/commit/59d58dc))
-* **console:** moved console fix from logging-console to polyfills ([6db2334](https://github.com/aurelia/dummy/commit/6db2334))
-* **Object:** add Object.is() ([#58](https://github.com/aurelia/dummy/issues/58)) ([3cf3410](https://github.com/aurelia/dummy/commit/3cf3410))
-* **reflect:** add polyfill for defineProperty ([c6fbc90](https://github.com/aurelia/dummy/commit/c6fbc90))
-
-
-### Performance Improvements
-
-* **symbol:** faster toString check ([f2349c8](https://github.com/aurelia/dummy/commit/f2349c8))
+## [1.3.2](https://github.com/aurelia/dummy/compare/1.3.1...1.3.2) (2019-02-03)
 
 
 
